@@ -12,6 +12,9 @@ import NotFound from "./pages/NotFound";
 import WhoIsWatching from "./components/WhoIsWatching";
 import Recruiter from "./pages/Recruiter";
 import WorkExperience from "./pages/WorkExperience";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
+import Projects from './pages/Projects';
 function AppContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -41,14 +44,27 @@ function AppContent() {
       {isLoading && <Loader onFinish={handleLoaderFinish} />}
 
       {!isLoading && hasInteracted && (
-        <Routes>
-          <Route path="/profile" element={<WhoIsWatching />} />
-          <Route path="/profile/:name" element={<Landing />} />
+        // <Routes>
+        //   <Route path="/profile" element={<WhoIsWatching />} />
+        //   <Route path="/profile/:name" element={<Landing />} />
+        //   <Route path="/profile/recruiter" element={<Recruiter />} />
+        //   <Route path="/work-experience" element={<WorkExperience />} />
+        //   <Route path="/skills" element={<Skills />} />
+        //   <Route path="/hire" element={<Contact />} />
+        //   <Route path="/projects" element={<Projects />} />
+        //   <Route path="*" element={<NotFound />} />
 
-          <Route path="/profile/recruiter" element={<Recruiter />} />
-          <Route path="/work-experience" element={<WorkExperience />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        // </Routes>
+        <Routes>
+        <Route path="/profile" element={<WhoIsWatching />} />
+        <Route path="/profile/:name" element={<Landing />} />
+        <Route path="/profile/recruiter" element={<Recruiter />} />
+        <Route path="/work-experience" element={<WorkExperience />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/hire" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       )}
     </div>
   );
@@ -61,3 +77,4 @@ export default function App() {
     </Router>
   );
 }
+

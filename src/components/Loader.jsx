@@ -1,24 +1,31 @@
-import React, { useEffect } from 'react';
-import netflixSound from '../assets/netflix-intro.mp3'; 
+
+import React, { useEffect, useState } from "react";
+import netflixSound from "../assets/netflix-intro.mp3";
+import "./Loader.css"; // We'll add CSS here
 
 const Loader = ({ onFinish }) => {
+  const [animate, setAnimate] = useState(false);
+
   useEffect(() => {
     const audio = new Audio(netflixSound);
-    audio.play();
+    audio.play().catch(console.error);
+
+    setAnimate(true); // start animation immediately
 
     const timer = setTimeout(() => {
-      onFinish(); // Notify when loading is done
-    }, 4000); // Adjust this to match your animation duration
+      onFinish(); // Notify parent loading is done
+    }, 4000); // same as animation duration
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [onFinish]);
 
   return (
-    <div className="h-screen w-screen bg-black flex items-center justify-center">
-        <h1 className="text-6xl animate-popIn glow-text">Sarthak Srivastava</h1>
+    <div className="loader-container">
+      <h1 className={`loader-text ${animate ? "zoomOut" : ""}`}>
+        Sarthak Srivastava
+      </h1>
     </div>
   );
 };
 
 export default Loader;
-

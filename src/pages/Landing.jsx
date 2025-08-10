@@ -1,29 +1,3 @@
-// import { useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
-
-// const Landing = () => {
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     // Redirect to Profiles after short delay
-//     const timer = setTimeout(() => {
-//       navigate('/profiles');
-//     }, 2000); // or on some other condition
-
-//     return () => clearTimeout(timer);
-//   }, [navigate]);
-
-//   return (
-//     <div className="text-center">
-//       <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-//       <p className="text-lg">Loading profile selection...</p>
-//     </div>
-//   );
-// };
-
-// export default Landing;
-
-
 import { useParams } from 'react-router-dom';
 
 const Landing = () => {
