@@ -1,0 +1,45 @@
+
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+This is a custom animation for the Netflix-like loader effect
+It creates a pop-in effect with a glowing text shadow
+The text will scale up and have a glowing effect similar to the Netflix logo animation
+The animation lasts for 1.5 seconds and eases out at the end
+The text color is set to Netflix red (#e50914) with a glowing effect
+The animation starts with the text scaled down and invisible, then scales up and becomes visible with a glowing effect
+The final state has the text at its normal size with a strong glow
+The animation can be applied to any element by adding the class 'animate-popIn' 
+*/
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    text-shadow: 0 0 0px #ff0000;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    text-shadow: 0 0 10px #ff0000;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 20px #ff0000;
+  }
+}
+
+.animate-popIn {
+  animation: popIn 1.5s ease-out forwards;
+}
+
+.glow-text {
+  color: #e50914; /* Netflix red */
+  text-shadow: 0 0 5px #e50914, 0 0 10px #e50914, 0 0 20px #e50914;
+}
