@@ -17,29 +17,3 @@ The animation starts with the text scaled down and invisible, then scales up and
 The final state has the text at its normal size with a strong glow
 The animation can be applied to any element by adding the class 'animate-popIn' 
 */
-
-@keyframes popIn {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-    text-shadow: 0 0 0px #ff0000;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-    text-shadow: 0 0 10px #ff0000;
-  }
-  100% {
-    transform: scale(1);
-    text-shadow: 0 0 20px #ff0000;
-  }
-}
-
-.animate-popIn {
-  animation: popIn 1.5s ease-out forwards;
-}
-
-.glow-text {
-  color: #e50914; /* Netflix red */
-  text-shadow: 0 0 5px #e50914, 0 0 10px #e50914, 0 0 20px #e50914;
-}

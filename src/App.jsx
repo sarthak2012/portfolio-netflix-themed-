@@ -44,17 +44,7 @@ function AppContent() {
       {isLoading && <Loader onFinish={handleLoaderFinish} />}
 
       {!isLoading && hasInteracted && (
-        // <Routes>
-        //   <Route path="/profile" element={<WhoIsWatching />} />
-        //   <Route path="/profile/:name" element={<Landing />} />
-        //   <Route path="/profile/recruiter" element={<Recruiter />} />
-        //   <Route path="/work-experience" element={<WorkExperience />} />
-        //   <Route path="/skills" element={<Skills />} />
-        //   <Route path="/hire" element={<Contact />} />
-        //   <Route path="/projects" element={<Projects />} />
-        //   <Route path="*" element={<NotFound />} />
 
-        // </Routes>
         <Routes>
         <Route path="/profile" element={<WhoIsWatching />} />
         <Route path="/profile/:name" element={<Landing />} />
