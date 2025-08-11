@@ -1,162 +1,166 @@
-import React from "react";
+import { useState } from "react";
 
-const timelineData = [
-  // Work Experience
-  {
-    title: "Software Developer - I 🎉",
-    company: "eKincare India",
-    type: "work",
-    date: "Jul 2020 - Nov 2021",
-    technologies: ["React", "Context API", "Twilio", "Razorpay", "AWS"],
-    bullets: [
-      "Developed chat and video consultation features for patient engagement.",
-      "Built an analytics dashboard, improving data insights for medical professionals.",
-      "Optimized Lighthouse score, boosting application performance.",
-    ],
-  },
-  {
-    title: "Mid-Level Software Developer 🎉",
-    company: "Kajima London",
-    type: "work",
-    date: "Jun 2023 - Present",
-    technologies: ["Ruby on Rails", "React", "Node.js", "AWS", "PostgreSQL"],
-    bullets: [
-      "Led NHSPS Open Space Website development for a seamless user experience.",
-      "Enhanced QA processes, reducing bug rate by 20%.",
-      "Optimized system performance for 10,000+ users and 50 million bookings.",
-    ],
-  },
-  {
-    title: "Software Developer - II 🎉",
-    company: "Roostify San Francisco",
-    type: "work",
-    date: "Nov 2021 - Dec 2022",
-    technologies: [
-      "CI/CD",
-      "Automated Testing",
-      "API Gateway",
-      "Financial Data Integration",
-    ],
-    bullets: [
-      "Implemented automated testing, reducing release cycle time by 30%.",
-      "Led the development of a loan origination platform, improving response time by 25%.",
-      "Collaborated closely with cross-functional teams on CI/CD pipeline enhancements.",
-    ],
-  },
-  {
-    title: "Software Developer 🎉",
-    company: "LetsVenture India",
-    type: "work",
-    date: "July 2018 - Jul 2020",
-    technologies: [
-      "Ruby on Rails",
-      "SQL",
-      "AngularJS",
-      "ReactJS",
-      "MERN stack",
-    ],
-    bullets: [
-      "Developed key features for LetsVenture platform, supporting investment growth.",
-      "Built a CRM tool from scratch to manage investor relationships.",
-      "Created a secondary fundraising platform, facilitating $1M+ investments.",
-    ],
-  },
-  // Education
-  {
-    title: "Masters 🎓",
-    company: "Swansea University",
-    type: "education",
-    date: "Jan 2022 - May 2023",
-    technologies: ["Java Spring Boot", "ReactJS", "Heroku", "Netlify"],
-    bullets: [
-      "Developed a form management application with Java Spring Boot and ReactJS, deployed on Heroku and Netlify.",
-    ],
-  },
-  {
-    title: "Bachelor's 🏅",
-    company: "Vellore Institute of Technology",
-    type: "education",
-    date: "Apr 2014 - Apr 2018",
-    technologies: [],
-    bullets: [
-      "Contributed to ISTE and Computer Society of India, organized Gravitas Fest, and published research in IJMET.",
-    ],
-  },
-];
+const App = () => {
+  const briefcaseSVG = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+    </svg>
+  );
 
-const TimelineItem = ({ item }) => (
-  <div className="flex flex-col md:flex-row md:items-center w-full my-6">
-    <div className="w-full md:w-1/4 text-left md:text-right md:pr-6 text-gray-400 shrink-0">
-      <p className="font-medium text-base md:text-lg">{item.date}</p>
-    </div>
-    <div className="relative md:w-3/4">
-      {/* Timeline line and dot */}
-      <div className="hidden md:block absolute w-px h-full bg-gray-700 left-[-8px] top-0"></div>
-      <div
-        className={`absolute w-3 h-3 rounded-full ${
-          item.type === "work" ? "bg-blue-500" : "bg-pink-400"
-        } left-[-13px] top-2 md:top-1/2 md:transform md:-translate-y-1/2`}
-      ></div>
-      {/* Card */}
-      <div className="bg-gray-800 p-4 md:p-6 rounded-lg shadow-md border border-gray-700 ml-4 md:ml-0">
-        <h3 className="text-base md:text-xl font-bold text-blue-400 mb-1">
-          {item.title}
-        </h3>
-        <h4 className="text-sm md:text-lg font-semibold text-gray-200 mb-2">
-          {item.company}
-        </h4>
-        {item.technologies.length > 0 && (
-          <p className="text-xs md:text-sm text-blue-200 mb-2">
-            <span className="font-bold">🔧 {item.technologies.join(", ")}</span>
-          </p>
-        )}
-        <ul className="list-disc pl-4 space-y-1 text-gray-300 text-xs md:text-base">
-          {item.bullets.map((bullet, index) => (
-            <li key={index}>{bullet}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </div>
-);
+  const graduationCapSVG = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21.42 10.96a2 2 0 0 0-.2-1.28l-6.7-1.12a2 2 0 0 0-1.28 0l-6.7 1.12a2 2 0 0 0-.2 1.28c-.01.52-.01 1.63 0 2.15a2 2 0 0 0 .2 1.28l6.7 1.12c.52.09 1.05.09 1.57 0l6.7-1.12a2 2 0 0 0 .2-1.28c.01-.52.01-1.63 0-2.15Z" />
+      <path d="m14 12.5-6.5-3.5" />
+      <path d="m14 12.5 6.5-3.5" />
+      <path d="M14 12.5V19" />
+    </svg>
+  );
 
-const WorkExperience = () => {
-  const workExperience = timelineData.filter((item) => item.type === "work");
-  const education = timelineData.filter((item) => item.type === "education");
+  const timelineElements = [
+    {
+      id: 1,
+      icon: "work",
+      date: "Jun 2023 - Present",
+      title: "Mid-Level Software Developer",
+      location: "Kajima London",
+      description:
+        "Led NHSPS Open Space Website development for a seamless user experience. Enhanced QA processes, reducing bug rate by 20%.",
+    },
+    {
+      id: 2,
+      icon: "work",
+      date: "Nov 2021 - Dec 2022",
+      title: "Software Developer - II",
+      location: "Roostify San Francisco",
+      description:
+        "Implemented automated testing, reducing release cycle time by 30%.",
+    },
+    {
+      id: 3,
+      icon: "work",
+      date: "Jul 2020 - Nov 2021",
+      title: "Software Developer - I",
+      location: "eKincare India",
+      description:
+        "Developed chat and video consultation features for patient engagement.",
+    },
+    {
+      id: 4,
+      icon: "work",
+      date: "Jul 2018 - Jul 2020",
+      title: "Software Developer",
+      location: "LetsVenture India",
+      description:
+        "Developed key features for LetsVenture platform, supporting investment growth.",
+    },
+    {
+      id: 5,
+      icon: "school",
+      date: "Jan 2022 - May 2023",
+      title: "Masters",
+      location: "Swansea University",
+      description:
+        "Developed a form management application with Java Spring Boot and ReactJS.",
+    },
+    {
+      id: 6,
+      icon: "school",
+      date: "Apr 2014 - Apr 2018",
+      title: "Bachelor's",
+      location: "Vellore Institute of Technology",
+      description:
+        "Contributed to ISTE and Computer Society of India, organized Gravitas Fest.",
+    },
+  ];
+
+  const ITEMS_PER_PAGE = 3;
+  const [page, setPage] = useState(0);
+  const totalPages = Math.ceil(timelineElements.length / ITEMS_PER_PAGE);
+
+  const currentItems = timelineElements.slice(
+    page * ITEMS_PER_PAGE,
+    page * ITEMS_PER_PAGE + ITEMS_PER_PAGE
+  );
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      <div className="max-w-5xl mx-auto py-8 px-2 md:px-8">
-        {/* Work Experience Section */}
-        <div className="mb-10">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-center mb-8 text-white bg-gray-900 bg-opacity-90 py-2 rounded-lg shadow">
-            Work Experience
-          </h2>
-          {workExperience.map((item, index) => (
-            <TimelineItem key={index} item={item} />
-          ))}
-        </div>
-        {/* Education Section */}
-        <div className="mb-10">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-center mb-8 text-white bg-gray-900 bg-opacity-90 py-2 rounded-lg shadow">
-            Education
-          </h2>
-          {education.map((item, index) => (
-            <TimelineItem key={index} item={item} />
-          ))}
-        </div>
+    <section className="bg-black text-white font-sans h-screen flex flex-col justify-between">
+      {/* Section Header */}
+      <div className="py-4 px-4 text-center border-b border-gray-800">
+        <h2 className="text-2xl font-bold text-red-600 border-b-2 border-red-600 inline-block pb-1">
+          My Journey
+        </h2>
       </div>
-      {/* Responsive timeline fix */}
-      <style>{`
-        @media (max-width: 768px) {
-          .timeline-card {
-            font-size: 13px !important;
-            padding: 8px !important;
-          }
-        }
-      `}</style>
-    </div>
+
+      {/* Timeline Items */}
+      <div className="flex-1 flex flex-col justify-center items-center gap-6 px-4">
+        {currentItems.map((item, index) => {
+          const isWork = item.icon === "work";
+          return (
+            <div
+              key={item.id}
+              className="bg-gray-900 p-4 rounded-lg shadow-md w-full sm:w-[60%] text-xs"
+            >
+              <div className="flex items-center gap-2">
+                <div className="text-red-500">
+                  {isWork ? briefcaseSVG : graduationCapSVG}
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold">{item.title}</h3>
+                  <h4 className="text-gray-400 text-[10px]">{item.location}</h4>
+                </div>
+              </div>
+              <p className="text-[11px] text-gray-300 mt-2">
+                {item.description}
+              </p>
+              <span className="block text-[9px] text-gray-500 mt-1">
+                {item.date}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Navigation Arrows */}
+      <div className="flex justify-center items-center gap-4 pb-4">
+        <button
+          className="px-3 py-1 bg-red-600 rounded disabled:opacity-40"
+          onClick={() => setPage((p) => p - 1)}
+          disabled={page === 0}
+        >
+          ← Prev
+        </button>
+        <span className="text-sm">
+          {page + 1} / {totalPages}
+        </span>
+        <button
+          className="px-3 py-1 bg-red-600 rounded disabled:opacity-40"
+          onClick={() => setPage((p) => p + 1)}
+          disabled={page === totalPages - 1}
+        >
+          Next →
+        </button>
+      </div>
+    </section>
   );
 };
 
-export default WorkExperience;
+export default App;
