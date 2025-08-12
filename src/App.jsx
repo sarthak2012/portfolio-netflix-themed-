@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -18,6 +17,9 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import MainLayout from "./components/Mainlayout";
 import Certifications from "./pages/Certifications";
+import Developer from "./pages/Developer";
+import Stalker from "./pages/Stalker";
+import Adventurer from "./pages/Adventurer";
 
 function AppContent() {
   const [isLoading, setIsLoading] = useState(false);
@@ -58,6 +60,11 @@ function AppContent() {
             <Route path="/hire" element={<Contact />} />
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/projects" element={<Projects />} />
+
+            <Route path="/profile/developer" element={<Developer />} />
+            <Route path="/profile/stalker" element={<Stalker />} />
+            <Route path="/profile/adventurer" element={<Adventurer />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </MainLayout>
