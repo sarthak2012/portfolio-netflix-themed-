@@ -1,7 +1,7 @@
 import React from "react";
 const Contact = () => {
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg text-gray-900">
+    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg text-gray-900 mt-24">
       {/* Badge */}
       <div className="flex items-center space-x-4">
         <img

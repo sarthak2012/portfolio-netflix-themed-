@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -14,7 +15,10 @@ import Recruiter from "./pages/Recruiter";
 import WorkExperience from "./pages/WorkExperience";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
-import Projects from './pages/Projects';
+import Projects from "./pages/Projects";
+import MainLayout from "./components/Mainlayout";
+import Certifications from "./pages/Certifications";
+
 function AppContent() {
   const [isLoading, setIsLoading] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -29,7 +33,7 @@ function AppContent() {
 
   const handleLoaderFinish = () => {
     setIsLoading(false);
-    navigate("/profile"); // Go straight to profile selector
+    navigate("/profile");
   };
 
   return (
@@ -44,17 +48,19 @@ function AppContent() {
       {isLoading && <Loader onFinish={handleLoaderFinish} />}
 
       {!isLoading && hasInteracted && (
-
-        <Routes>
-        <Route path="/profile" element={<WhoIsWatching />} />
-        <Route path="/profile/:name" element={<Landing />} />
-        <Route path="/profile/recruiter" element={<Recruiter />} />
-        <Route path="/work-experience" element={<WorkExperience />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/hire" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <MainLayout>
+          <Routes>
+            <Route path="/profile" element={<WhoIsWatching />} />
+            <Route path="/profile/:name" element={<Landing />} />
+            <Route path="/profile/recruiter" element={<Recruiter />} />
+            <Route path="/work-experience" element={<WorkExperience />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/hire" element={<Contact />} />
+            <Route path="/certifications" element={<Certifications />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </MainLayout>
       )}
     </div>
   );
@@ -67,4 +73,3 @@ export default function App() {
     </Router>
   );
 }
-

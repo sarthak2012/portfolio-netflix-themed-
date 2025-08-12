@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const App = () => {
+const WorkExperience = () => {
   const briefcaseSVG = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -104,14 +104,14 @@ const App = () => {
   return (
     <section className="bg-black text-white font-sans h-screen flex flex-col justify-between">
       {/* Section Header */}
-      <div className="py-4 px-4 text-center border-b border-gray-800">
+      <div className=" px-4 text-center border-b border-gray-800 mt-16 mb-5">
         <h2 className="text-2xl font-bold text-red-600 border-b-2 border-red-600 inline-block pb-1">
           My Journey
         </h2>
       </div>
 
       {/* Timeline Items */}
-      <div className="flex-1 flex flex-col justify-center items-center gap-6 px-4">
+      <div className="flex-1 flex flex-col justify-center items-center gap-6">
         {currentItems.map((item, index) => {
           const isWork = item.icon === "work";
           return (
@@ -163,4 +163,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default WorkExperience;

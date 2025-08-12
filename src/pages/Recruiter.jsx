@@ -2,11 +2,7 @@ import videoBg from "../assets/background.mp4";
 import sarthak from "../assets/sarthak.png";
 import { Link } from "react-router-dom";
 const topPicks = [
-  {
-    label: "Work Permit",
-    img: "https://picsum.photos/seed/workpermit/250/200",
-    link: "/work-experience",
-  },
+  
   {
     label: "Skills",
     img: "https://picsum.photos/seed/skills/250/200",
@@ -15,7 +11,7 @@ const topPicks = [
   {
     label: "Experience",
     img: "https://picsum.photos/seed/workexperience/250/200",
-    link: "/experience",
+    link: "/work-experience",
   },
   {
     label: "Certifications",
@@ -23,14 +19,14 @@ const topPicks = [
     link: "/certifications",
   },
   {
-    label: "Recommendations",
-    img: "https://picsum.photos/seed/recommendations/250/200",
-    link: "/recommendations",
-  },
-  {
     label: "Projects",
     img: "https://picsum.photos/seed/projects/250/200",
     link: "/projects",
+  },
+  {
+    label: "Contact Me",
+    img: "https://picsum.photos/seed/workpermit/250/200",
+    link: "/hire",
   },
 ];
 
@@ -53,43 +49,14 @@ const continueWatching = [
   {
     label: "Contact Me",
     img: "https://picsum.photos/id/1029/300/200",
-    link: "/contact",
+    link: "/hire",
   },
 ];
 
 const Recruiter = () => {
   return (
     <div className="w-full bg-gray-900 min-h-screen">
-      {/* FIXED HEADER */}
-      <header className="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-opacity-80 backdrop-blur-md z-50">
-        <img src={sarthak} alt="Sarthak" className="h-10" />
-        <nav className="flex gap-6 text-lg">
-          <a href="#home" className="hover:text-red-500 transition text-white">
-            Home
-          </a>
-          <Link
-            to="/work-experience"
-            className="hover:text-red-500 transition text-white"
-          >
-            Professional
-          </Link>
-          <Link
-            to="/skills"
-            className="hover:text-red-500 transition text-white"
-          >
-            Skills
-          </Link>
-          <Link
-            to="/projects"
-            className="hover:text-red-500 transition text-white"
-          >
-            Projects
-          </Link>
-          <Link to="/hire" className="hover:text-red-500 transition text-white">
-            Hire Me
-          </Link>
-        </nav>
-      </header>
+
 
       <div
         className="profile-page"
@@ -261,14 +228,12 @@ const Recruiter = () => {
       </section>
 
       {/* TOP PICKS SECTION */}
-
-      {/* TOP PICKS SECTION */}
       <section className="bg-[#141414] text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-8">
             Today's Top Picks for Recruiter
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {topPicks.map((pick, index) => (
               <Link
                 key={index}

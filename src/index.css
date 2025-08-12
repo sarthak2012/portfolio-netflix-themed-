@@ -17,7 +17,10 @@ The animation starts with the text scaled down and invisible, then scales up and
 The final state has the text at its normal size with a strong glow
 The animation can be applied to any element by adding the class 'animate-popIn' 
 */
-
+body {
+  @apply bg-black;
+  overflow-x: hidden;
+}
 @keyframes popIn {
   0% {
     transform: scale(0.5);
