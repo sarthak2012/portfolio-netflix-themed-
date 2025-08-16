@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Certifications.css";
 import { FaExternalLinkAlt, FaUniversity } from "react-icons/fa";
 import { SiUdemy, SiCoursera, SiIeee } from "react-icons/si";

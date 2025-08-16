@@ -308,8 +308,8 @@ const Adventurer = () => {
 return (
     <div className="w-full bg-gray-900 min-h-screen">
       <ProfilePage
-        title="Sumanth Samala - Senior JAVA Developer"
-        description="Dynamic and results-driven Senior Software Engineer with 5+ years in full-stack development across high-impact, large-scale applications. Expertise in Ruby on Rails, React, Node, AWS, Kubernetes, and Docker. Proven track record in scaling systems, securing applications, and optimizing performance."
+        title="Sarthak Srivastava – Full-Stack Developer"
+        description="Exploring new tech, building sleek web experiences, and solving problems one line of code at a time."
         videoBg={videoBg}
         topPicks={topPicks}
         continueWatching={continueWatching}

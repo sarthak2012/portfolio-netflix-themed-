@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { FaFileAlt, FaLinkedin } from "react-icons/fa";
 import Resume from "../assets/Resume.pdf";

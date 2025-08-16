@@ -1,5 +1,3 @@
-
-
 body {
   background: #3da3d5;
   font-family: "Montserrat", sans-serif;
@@ -7,28 +5,28 @@ body {
   color: rgb(53, 53, 53);
   margin: 0;
   padding: 0;
-  overflow-x: auto; /* allow horizontal scroll if needed */
+  overflow-x: auto; 
 }
 
 .timeline-container {
-  min-height: 100vh; /* always at least full screen height */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: auto; /* horizontal scroll if needed */
-  overflow-y: hidden; /* prevent vertical scroll cutting */
+  overflow-x: auto; 
+  overflow-y: hidden; 
 }
 
 .title {
-  font-size: 4em; /* smaller than 15em so it fits */
+  font-size: 4em; 
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   margin: 20px 0;
-  white-space: nowrap; /* prevent breaking into multiple lines */
+  white-space: nowrap; 
 }
 
 .vertical-timeline {
-  display: inline-block; /* so it can scroll horizontally */
+  display: inline-block; 
 }
 
 .vertical-timeline-element-content {

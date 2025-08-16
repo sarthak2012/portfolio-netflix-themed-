@@ -1,3 +1,4 @@
+
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
@@ -22,8 +23,8 @@ const internshipItems = [
 
 const personalItems = [
   {
-    title: "Morning Coding Session",
-    description: "Focusing on personal projects and skill-building before starting work.",
+    title: "Weekend Experiments",
+    description: "Dabbling with React, Tailwind, or new frameworks when time permits to explore ideas or try out new concepts.",
     img: "https://picsum.photos/seed/morning/400/250",
   },
   {
@@ -32,8 +33,8 @@ const personalItems = [
     img: "https://picsum.photos/seed/debug/400/250",
   },
   {
-    title: "Evening Side Projects",
-    description: "Building personal apps, experimenting with React, Tailwind, and other tech stacks.",
+    title: "Problem Solving & Practice",
+    description: "Occasional algorithm practice or debugging sessions to sharpen coding skills and understand complex problems.",
     img: "https://picsum.photos/seed/sideproject/400/250",
   },
 ];
@@ -44,15 +45,17 @@ function ScrollRow({ items, title }) {
   const scroll = (direction) => {
     if (rowRef.current) {
       rowRef.current.scrollBy({
-        left: direction === "left" ? -300 : 300,
+        left: direction === "left" ? -320 : 320,
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <div className="mb-10 relative">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4 ">{title}</h2>
+    <div className="mb-12 relative mx-6 md:mx-20">
+      {/* Section Header */}
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-red-600">{title}</h2>
+
       <div className="relative">
         <div
           ref={rowRef}
@@ -61,17 +64,23 @@ function ScrollRow({ items, title }) {
           {items.map((item, idx) => (
             <motion.div
               key={idx}
-              whileHover={{ scale: 1.05 }}
-              className="min-w-[250px] bg-gray-900 rounded-2xl overflow-hidden shadow-lg flex-shrink-0 cursor-pointer"
+              whileHover={{ scale: 1.07 }}
+              className="relative min-w-[250px] md:min-w-[300px] h-64 rounded-2xl overflow-hidden shadow-xl cursor-pointer group"
             >
+              {/* Image with overlay */}
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-36 object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-gray-400 text-sm mt-2">{item.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+
+              {/* Text content */}
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                <p className="text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {item.description}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -80,13 +89,13 @@ function ScrollRow({ items, title }) {
         {/* Arrows */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 p-2 rounded-full hover:bg-gray-700 transition"
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 p-3 rounded-full hover:bg-red-600 transition-colors duration-300"
         >
           <ChevronLeftIcon className="h-6 w-6 text-white" />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 p-2 rounded-full hover:bg-gray-700 transition"
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-70 p-3 rounded-full hover:bg-red-600 transition-colors duration-300"
         >
           <ChevronRightIcon className="h-6 w-6 text-white" />
         </button>
@@ -97,18 +106,20 @@ function ScrollRow({ items, title }) {
 
 export default function DailyGrind() {
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-10 mt-[300px]">
+    <div className="min-h-screen bg-black text-white py-16 mt-[400px]">
       {/* Page Header */}
-      <h1 className="text-4xl font-bold mb-6 text-center">💻 Daily Grind</h1>
-      <p className="text-gray-400 mb-8 text-center max-w-2xl mx-auto">
-        A look at my 9-to-5 internship routine and personal coding habits, workflows, and tools I use day-to-day.
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-red-600">
+        💻 Daily Grind
+      </h1>
+      <p className="text-gray-400 mb-12 text-center max-w-2xl mx-auto text-lg md:text-xl">
+        Peek into my 9-to-5 internship routine and personal coding side projects, workflows, and tools I use every day.
       </p>
 
       {/* Internship Section */}
       <ScrollRow items={internshipItems} title="Internship Routine" />
 
       {/* Personal Projects Section */}
-      <ScrollRow items={personalItems} title="Personal Projects & Side Hustles" />
+      <ScrollRow items={personalItems} title="Occasional Coding Experiments" />
     </div>
   );
 }

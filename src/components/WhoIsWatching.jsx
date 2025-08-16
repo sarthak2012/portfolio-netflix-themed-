@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-
 import blue from "../assets/blue.png";
 import grey from "../assets/grey.png";
 import yellow from "../assets/yellow.png";

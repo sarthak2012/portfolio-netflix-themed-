@@ -11,7 +11,7 @@
 
 .loader-text {
   font-size: 6rem;
-  color: #e50914; /* Netflix red */
+  color: #e50914; 
   opacity: 0;
   transform: scale(0.8);
   font-weight: bold;

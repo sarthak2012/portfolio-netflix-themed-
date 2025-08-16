@@ -8,7 +8,7 @@ const buildLogs = [
     description:
       "How I designed and deployed my first developer portfolio with React and Tailwind.",
     img: "https://picsum.photos/seed/portfolio/400/250",
-    link: "/build-logs/1",   // ✅ fix
+    link: "/build-logs/1",   
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const buildLogs = [
     description:
       "Breaking down how I built and connected REST APIs with Node.js and Express.",
     img: "https://picsum.photos/seed/api/400/250",
-    link: "/build-logs/2",   // ✅ fix
+    link: "/build-logs/2",   
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ export default function BuildLogs() {
               <p className="text-gray-400 text-sm mt-2">{log.description}</p>
               <Link
                 to={log.link}
-                className="mt-3 inline-block text-sm text-blue-400 hover:text-blue-300"
+                className="mt-3 inline-block text-sm text-red-600 hover:text-blue-300"
               >
                 Watch Log →
               </Link>

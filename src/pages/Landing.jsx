@@ -11,7 +11,7 @@ const Landing = () => {
       </h1>
       <p className="text-lg max-w-xl">
         This is the personalized dashboard for <span className="text-red-500 font-semibold">{formattedName}</span>.  
-        You can show different sections here depending on the profile type.
+        You will be different sections here depending on the profile type.
       </p>
     </div>
   );
