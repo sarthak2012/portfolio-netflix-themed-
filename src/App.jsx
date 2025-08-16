@@ -20,6 +20,10 @@ import Certifications from "./pages/Certifications";
 import Developer from "./pages/Developer";
 import Stalker from "./pages/Stalker";
 import Adventurer from "./pages/Adventurer";
+import Learning from "./pages/Learning";
+import Grind from "./pages/Grind";
+import BuildLogs from "./pages/BuildLogs";
+import BuildDetail from "./pages/BuildLogDetail";
 
 function AppContent() {
   const [isLoading, setIsLoading] = useState(false);
@@ -60,11 +64,13 @@ function AppContent() {
             <Route path="/hire" element={<Contact />} />
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/projects" element={<Projects />} />
-
             <Route path="/profile/developer" element={<Developer />} />
             <Route path="/profile/stalker" element={<Stalker />} />
             <Route path="/profile/adventurer" element={<Adventurer />} />
-
+            <Route path="/currently-learning" element={<Learning />} />
+            <Route path="/daily-grind" element={<Grind />} />{" "}
+            <Route path="/build-logs" element={<BuildLogs />} />
+            <Route path="/build-logs/:id" element={<BuildDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </MainLayout>

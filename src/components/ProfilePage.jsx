@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { FaFileAlt, FaLinkedin } from "react-icons/fa";
-
+import Resume from "../assets/Resume.pdf";
 const ProfilePage = ({
   title,
   description,
@@ -39,13 +39,13 @@ const ProfilePage = ({
 
           <div className="flex justify-center gap-6">
             <a
-              href="/resume"
+              href={Resume}
               className="flex items-center gap-2 bg-red-600 px-6 py-3 rounded-lg hover:bg-red-700 hover:shadow-[0_0_20px_rgba(255,0,0,0.8)] transition"
             >
               <FaFileAlt /> Resume
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sarthak-srivastava-61166a213/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-blue-700 px-6 py-3 rounded-lg hover:bg-blue-800 hover:shadow-[0_0_20px_rgba(0,120,255,0.8)] transition"

@@ -1,56 +1,63 @@
 import videoBg from "../assets/background.mp4";
 import sarthak from "../assets/sarthak.png";
 import { Link } from "react-router-dom";
-import ProfilePage from "../components/ProfilePage"; 
+import ProfilePage from "../components/ProfilePage";
+import skills from "../assets/skills.jpg";
+import Experience from "../assets/Experience.jpg";
+import Certifications from "../assets/Certifications.jpg";
+import Projects from "../assets/Projects.jpg";
+import Contact from "../assets/Contact.jpg";
+import Learning from "../assets/Learning.jpg";
+import Logs from "../assets/Logs.jpg";
+import Grind from "../assets/Grind.jpg";
 
 const topPicks = [
-  
   {
     label: "Skills",
-    img: "https://picsum.photos/seed/skills/250/200",
+    img: skills,
     link: "/skills",
   },
   {
     label: "Experience",
-    img: "https://picsum.photos/seed/workexperience/250/200",
+    img: Experience,
     link: "/work-experience",
   },
   {
     label: "Certifications",
-    img: "https://picsum.photos/seed/certifications/250/200",
+    img: Certifications,
     link: "/certifications",
   },
   {
     label: "Projects",
-    img: "https://picsum.photos/seed/projects/250/200",
+    img: Projects,
     link: "/projects",
   },
   {
     label: "Contact Me",
-    img: "https://picsum.photos/seed/workpermit/250/200",
+    img: Contact,
     link: "/hire",
   },
 ];
 
 const continueWatching = [
   {
-    label: "Music",
-    img: "https://picsum.photos/id/1025/300/200",
-    link: "/music",
+    label: "Currently Learning",
+    img: Learning,
+    link: "/currently-learning",
   },
   {
-    label: "Reading",
-    img: "https://picsum.photos/id/1026/300/200",
-    link: "/reading",
+    label: "Build Logs",
+    img: Logs,
+    link: "/build-logs",
   },
   {
-    label: "Blogs",
-    img: "https://picsum.photos/id/1027/300/200",
-    link: "/blogs",
+    label: "Daily Grind",
+    img: Grind,
+    link: "/daily-grind",
   },
   {
     label: "Contact Me",
-    img: "https://picsum.photos/id/1029/300/200",
+    img: Contact,
     link: "/hire",
   },
 ];
