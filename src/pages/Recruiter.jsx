@@ -1,4 +1,4 @@
-import videoBg from "../assets/background.mp4";
+import videoBg from "../assets/background.webm";
 import sarthak from "../assets/sarthak.webp";
 import { Link } from "react-router-dom";
 import ProfilePage from "../components/ProfilePage";
