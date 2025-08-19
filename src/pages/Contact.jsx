@@ -9,7 +9,7 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-red-600">Now Streaming: Sarthak</h3>
           <p className="text-sm text-gray-400 mt-1">B.Tech Computer Science Student | Full-Stack Developer</p>
           <p className="mt-2 text-gray-300 text-sm">
-            Hands-on experience with C++, SQL, React.js, Node.js, MERN stack, and AWS. Skilled in building scalable web apps, integrating APIs, and creating responsive interfaces.
+            Hands-on experience with C++, CMS, SQL, React.js, Node.js, MERN stack, and AWS. Skilled in building scalable web apps, integrating APIs, and creating responsive interfaces.
           </p>
           <a
             href="https://www.linkedin.com/in/sarthaksrivastava"

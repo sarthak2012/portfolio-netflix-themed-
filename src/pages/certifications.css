@@ -2,6 +2,7 @@
   min-height: 100vh;
   background: black;
   color: white;
+  margin-top: 1100px;
   padding: 4rem 1rem;
   text-align: center;
 }
@@ -102,4 +103,13 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+.category-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  margin: 2rem 0 1rem;
+  text-align: center;
 }

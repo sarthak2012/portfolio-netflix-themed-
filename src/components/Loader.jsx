@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import netflixSound from "../assets/netflix-intro.mp3";
+
 import "./Loader.css"; 
 const Loader = ({ onFinish }) => {
   const [animate, setAnimate] = useState(false);

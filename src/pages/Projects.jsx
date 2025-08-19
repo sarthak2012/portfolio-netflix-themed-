@@ -2,33 +2,26 @@ import React, { useState, useEffect, useRef } from "react";
 
 // Netflix-style data
 const products = [
-  {
-    title: "Angular to React Migration",
+{
+    title: "School Management System",
     description:
-      "Led the team in the migration from Angular to React, focusing on complex components and Formik for validations.",
-    tech: ["ReactJS", "Ruby on Rails"],
-    img: "https://placehold.co/600x400/141414/ffffff?text=React+Migration",
+      "Architected and developed a MERN-based school management app with full CRUD admin dashboard for announcements, academic planners, admissions, faculty, and applications.",
+    tech: ["MongoDB", "Express.js", "React", "Node.js"],
+    img: "https://placehold.co/600x400/141414/ffffff?text=School+System",
   },
   {
-    title: "NHSPS Open Space Website",
+    title: "Portfolio Generation Website",
     description:
-      "Led the development of a complex website for NHSPS, focusing on a seamless user experience and high performance.",
-    tech: ["Ruby on Rails", "React", "PostgreSQL"],
-    img: "https://placehold.co/600x400/141414/ffffff?text=Healthcare+App",
+      "Collaborated in a 4-member team to build a portfolio builder using Django backend with HTML, CSS, and JS frontend. Created 10+ reusable React components for customization.",
+    tech: ["Django", "React", "HTML5", "CSS", "JavaScript"],
+    img: "https://placehold.co/600x400/141414/ffffff?text=Portfolio+Builder",
   },
   {
-    title: "Loan Origination Platform",
+    title: "Behance-Inspired Platform",
     description:
-      "Implemented automated testing and led the development of a loan origination platform, improving response time by 25%.",
-    tech: ["CI/CD", "Automated Testing", "API Gateway"],
-    img: "https://placehold.co/600x400/141414/ffffff?text=Financial+Platform",
-  },
-  {
-    title: "CRM Tool & Fundraising Platform",
-    description:
-      "Built a CRM tool to manage investor relationships and created a fundraising platform facilitating over $1M in investments.",
-    tech: ["Ruby on Rails", "SQL", "MERN stack"],
-    img: "https://placehold.co/600x400/141414/ffffff?text=CRM+System",
+      "Led frontend development of a creative showcase platform using React and Tailwind. Added features for content uploads, likes, and user interactions.",
+    tech: ["React", "TailwindCSS"],
+    img: "https://placehold.co/600x400/141414/ffffff?text=Creative+Platform",
   },
 ];
 
