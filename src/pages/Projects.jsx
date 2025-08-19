@@ -46,6 +46,7 @@ const ProductCard = ({ product, inView, delay }) => {
     >
       <img
         src={product.img}
+        loading="lazy"
         alt={`Preview of ${product.title}`}
         className="w-full h-40 object-cover"
       />

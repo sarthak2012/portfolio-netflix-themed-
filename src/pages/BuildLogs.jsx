@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import episode1 from "../assets/episode1.webp";
+import episode2 from "../assets/episode2.webp";
+import episode3 from "../assets/episode3.webp";
 
 const buildLogs = [
   {
@@ -7,7 +10,7 @@ const buildLogs = [
     title: "Episode 1: Portfolio v1",
     description:
       "How I designed and deployed my first developer portfolio with React and Tailwind.",
-    img: "https://picsum.photos/seed/portfolio/400/250",
+    img: episode1,
     link: "/build-logs/1",   
   },
   {
@@ -15,7 +18,7 @@ const buildLogs = [
     title: "Episode 2: API Integration",
     description:
       "Breaking down how I built and connected REST APIs with Node.js and Express.",
-    img: "https://picsum.photos/seed/api/400/250",
+    img: episode2,
     link: "/build-logs/2",   
   },
   {
@@ -23,8 +26,8 @@ const buildLogs = [
     title: "Episode 3: Netflix-Inspired Portfolio",
     description:
       "The story of building this Netflix-themed portfolio using React, Vite, and Tailwind.",
-    img: "https://picsum.photos/seed/netflix/400/250",
-    link: "/build-logs/3",   
+    img: episode3,
+    link: "/build-logs/3",
   },
 ];
 
@@ -45,6 +48,7 @@ export default function BuildLogs() {
             <img
               src={log.img}
               alt={log.title}
+              loading="lazy"
               className="w-full h-48 object-cover"
             />
             <div className="p-4">

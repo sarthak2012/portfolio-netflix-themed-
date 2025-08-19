@@ -1,4 +1,9 @@
-
+import internship from "../assets/Internship.webp";
+import learn from "../assets/learn.webp";
+import algo from "../assets/algo.webp";
+import Collaboration from "../assets/Collaboration.webp";
+import debug from "../assets/debug.webp";
+import wekend from "../assets/wekend.webp";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
@@ -7,17 +12,17 @@ const internshipItems = [
   {
     title: "9-to-5 Internship",
     description: "Working on assigned projects, attending stand-ups, and collaborating with the team.",
-    img: "https://picsum.photos/seed/internship/400/250",
+    img: internship,
   },
   {
     title: "Collaboration & Reviews",
     description: "Code reviews, pair programming, and mentoring sessions during internship hours.",
-    img: "https://picsum.photos/seed/collab/400/250",
+    img: Collaboration,
   },
   {
     title: "Learning New Tech at Work",
     description: "Exploring frameworks, APIs, and tools relevant to internship projects.",
-    img: "https://picsum.photos/seed/worktech/400/250",
+    img: learn,
   },
 ];
 
@@ -25,17 +30,17 @@ const personalItems = [
   {
     title: "Weekend Experiments",
     description: "Dabbling with React, Tailwind, or new frameworks when time permits to explore ideas or try out new concepts.",
-    img: "https://picsum.photos/seed/morning/400/250",
+    img: wekend,
   },
   {
     title: "Debugging & Refactoring",
     description: "Improving code quality in personal projects and side projects.",
-    img: "https://picsum.photos/seed/debug/400/250",
+    img: debug,
   },
   {
     title: "Problem Solving & Practice",
     description: "Occasional algorithm practice or debugging sessions to sharpen coding skills and understand complex problems.",
-    img: "https://picsum.photos/seed/sideproject/400/250",
+    img: algo,
   },
 ];
 
@@ -70,6 +75,7 @@ function ScrollRow({ items, title }) {
               {/* Image with overlay */}
               <img
                 src={item.img}
+                loading="lazy"
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />

@@ -1,5 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import episode1 from "../assets/episode1.webp";
+import episode2 from "../assets/episode2.webp";
+import episode3 from "../assets/episode3.webp";
 
 const buildLogs = [
   {
@@ -9,7 +12,7 @@ const buildLogs = [
     details: `I kicked things off with my very first portfolio site — built using React and TailwindCSS. 
 Think of it as my "origin story." The toughest challenge? Making it responsive and visually appealing while keeping performance smooth. 
 For the grand finale, I deployed it on Vercel, pushing it live in minutes like a season drop on Netflix.`,
-    img: "https://picsum.photos/seed/portfolio/1200/500",
+    img: episode1,
     stack: ["React", "TailwindCSS", "Vercel"],
   },
   {
@@ -19,7 +22,7 @@ For the grand finale, I deployed it on Vercel, pushing it live in minutes like a
     details: `In this chapter, I built REST APIs with Node.js and Express. 
 It felt like directing multiple characters — routes, controllers, and middlewares — all playing their part. 
 With Postman as my testing ground, I tackled CORS, authentication, and error handling like plot twists to keep everything secure and smooth.`,
-    img: "https://picsum.photos/seed/api/1200/500",
+    img: episode2,
     stack: ["Node.js", "Express", "Postman"],
   },
   {
@@ -30,7 +33,7 @@ With Postman as my testing ground, I tackled CORS, authentication, and error han
 complete with dynamic routing, sleek UI components, and Tailwind-powered styling. 
 To give it that "recommendation engine" vibe, I integrated mock APIs for personalized picks. 
 It turned my portfolio into a binge-worthy project showcase.`,
-    img: "https://picsum.photos/seed/netflix/1200/500",
+    img: episode3,
     stack: ["React", "Vite", "Tailwind", "Framer Motion"],
   },
 ];
@@ -54,6 +57,7 @@ export default function BuildDetail() {
         <img
           src={log.img}
           alt={log.title}
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />

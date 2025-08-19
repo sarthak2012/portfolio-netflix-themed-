@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import blue from "../assets/blue.png";
-import grey from "../assets/grey.png";
-import yellow from "../assets/yellow.png";
-import red from "../assets/red.png";
+import blue from "../assets/blue.webp";
+import grey from "../assets/grey.webp";
+import yellow from "../assets/yellow.webp";
+import red from "../assets/red.webp";
 
 const profiles = [
   { name: "Recruiter", image: blue, path: "/profile/recruiter" },
@@ -28,6 +28,7 @@ const WhoIsWatching = () => {
             <img
               src={profile.image}
               alt={profile.name}
+              loading="lazy" 
               className="w-28 h-28 md:w-40 md:h-40 object-cover border-4 border-transparent hover:border-white"
             />
             <p className="mt-3 text-lg">{profile.name}</p>

@@ -69,6 +69,7 @@ const ProfilePage = ({
               <img
                 src={pick.img}
                 alt={pick.label}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end justify-center p-2">
@@ -96,6 +97,7 @@ const ProfilePage = ({
               <img
                 src={item.img}
                 alt={item.label}
+                loading="lazy" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end justify-center p-2">

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import sarthak from "../assets/sarthak.png";
+import sarthak from "../assets/sarthak.webp";
 
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-black bg-opacity-80 backdrop-blur-md z-50">
       {/* Logo with link */}
       <Link to="/profile">
-        <img src={sarthak} alt="Sarthak" className="h-10 cursor-pointer" />
+        <img src={sarthak} alt="Sarthak" loading="lazy" className="h-10 cursor-pointer" />
       </Link>
 
       {/* Navigation */}

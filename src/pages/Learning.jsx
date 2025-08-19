@@ -1,34 +1,38 @@
 import { motion } from "framer-motion";
-
+import CMS from "../assets/cms.webp"
+import Frontend from "../assets/frontend.webp"
+import Backend from "../assets/backend.webp"
+import Framer from "../assets/frammer.webp"
+import API from "../assets/api.webp"
 const learningTopics = [
   {
     title: "CMS Development",
     description: "Hands-on with WordPress, Elementor, Divi, and WPBakery for modern, responsive websites.",
-    img: "https://picsum.photos/seed/nextjs/400/250",
+    img: CMS,
     stack: ["WordPress", "Elementor", "Divi"]
   },
   {
     title: "Frontend Development",
     description: "React.js, Tailwind CSS, and modern UI/UX for dynamic, user-friendly interfaces.",
-    img: "https://picsum.photos/seed/graphql/400/250",
+    img: Frontend,
     stack: ["React", "Tailwind", "UI/UX"]
   },
   {
     title: "Backend Development",
     description: "Node.js, Express, MongoDB & MySQL for building scalable backend systems.",
-    img: "https://picsum.photos/seed/ai/400/250",
+    img: Backend,
     stack: ["Node.js", "Express", "MongoDB"]
   },
   {
     title: "Framer Motion/GSAP",
     description: "Creating smooth animations for React apps.",
-    img: "https://picsum.photos/seed/framer/400/250",
+    img: Framer,
     stack: ["Framer Motion", "GSAP"]
   },
   {
     title: "API Integration",
     description: "Integrating RESTful APIs and third-party services for seamless functionality.",
-    img: "https://picsum.photos/seed/ts/400/250",
+    img: API,
     stack: ["REST API", "Third-Party API"]
   },
 ];

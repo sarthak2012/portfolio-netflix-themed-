@@ -1,15 +1,15 @@
 import videoBg from "../assets/background.mp4";
-import sarthak from "../assets/sarthak.png";
+import sarthak from "../assets/sarthak.webp";
 import { Link } from "react-router-dom";
 import ProfilePage from "../components/ProfilePage";
-import skills from "../assets/skills.jpg";
-import Experience from "../assets/Experience.jpg";
-import Certifications from "../assets/Certifications.jpg";
-import Projects from "../assets/Projects.jpg";
-import Contact from "../assets/Contact.jpg";
-import Learning from "../assets/Learning.jpg";
-import Logs from "../assets/Logs.jpg";
-import Grind from "../assets/Grind.jpg";
+import skills from "../assets/skills.webp";
+import Experience from "../assets/Experience.webp";
+import Certifications from "../assets/Certifications.webp";
+import Projects from "../assets/Projects.webp";
+import Contact from "../assets/Contact.webp";
+import Learning from "../assets/Learning.webp";
+import Logs from "../assets/Logs.webp";
+import Grind from "../assets/Grind.webp";
 
 const topPicks = [
   {
@@ -65,7 +65,6 @@ const continueWatching = [
 // const Developer = () => {
 //   return (
 //     <div className="w-full bg-gray-900 min-h-screen">
-
 
 //       <div
 //         className="profile-page"
@@ -255,6 +254,7 @@ const continueWatching = [
 //                 <img
 //                   src={pick.img}
 //                   alt={pick.label}
+//                   loading="lazy"
 //                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
 //                 />
 
@@ -285,6 +285,7 @@ const continueWatching = [
 //                 <img
 //                   src={item.img}
 //                   alt={item.label}
+//                   loading="lazy"
 //                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
 //                 />
 
@@ -303,12 +304,8 @@ const continueWatching = [
 
 // export default Developer;
 
-
-
-
 const Developer = () => {
-
-return (
+  return (
     <div className="w-full bg-gray-900 min-h-screen">
       <ProfilePage
         title="Sarthak Srivastava – Full-Stack Developer"
