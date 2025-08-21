@@ -10,52 +10,7 @@ import { IoSchool as SchoolIcon } from "react-icons/io5";
 import { FaStar as StarIcon } from "react-icons/fa";
 
 const WorkExperience = () => {
-  // Local timeline data (instead of backend)
-  // const [timeLineData] = useState([
-  //   {
-  //     timelineType: "work",
-  //     title: "Mid-Level Software Developer",
-  //     name: "Kajima London",
-  //     techStack: "React, Node.js, AWS, Docker",
-  //     summaryPoints:
-  //       "Led NHSPS Open Space Website development, improved QA processes reducing bug rate by 20%.",
-  //     dateRange: "Jun 2023 - Present",
-  //   },
-  //   {
-  //     timelineType: "work",
-  //     title: "Software Developer - II",
-  //     name: "Roostify San Francisco",
-  //     techStack: "React, TypeScript, Cypress",
-  //     summaryPoints:
-  //       "Implemented automated testing, reducing release cycle time by 30%.",
-  //     dateRange: "Nov 2021 - Dec 2022",
-  //   },
-  //   {
-  //     timelineType: "work",
-  //     title: "Software Developer - I",
-  //     name: "eKincare India",
-  //     techStack: "Node.js, React, WebRTC",
-  //     summaryPoints:
-  //       "Developed chat and video consultation features for patient engagement.",
-  //     dateRange: "Jul 2020 - Nov 2021",
-  //   },
-  //   {
-  //     timelineType: "school",
-  //     title: "Masters in Computer Science",
-  //     name: "Swansea University",
-  //     summaryPoints:
-  //       "Built a form management app with Java Spring Boot & ReactJS.",
-  //     dateRange: "Jan 2022 - May 2023",
-  //   },
-  //   {
-  //     timelineType: "school",
-  //     title: "Bachelor’s in Computer Science",
-  //     name: "Vellore Institute of Technology",
-  //     summaryPoints:
-  //       "Contributed to ISTE and Computer Society of India, organized Gravitas Fest.",
-  //     dateRange: "Apr 2014 - Apr 2018",
-  //   },
-  // ]);
+
 
    const [timeLineData] = useState([
     {
